@@ -1,0 +1,390 @@
+/* ========== RESET E VARIÁVEIS ========== */
+:root {
+  --cor-primaria: #6c3fe0;
+  --cor-secundaria: #ff5fa2;
+  --cor-escura: #1d1b2f;
+  --cor-clara: #f6f4ff;
+  --cor-texto: #3a3850;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 1rem = 16px */
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--cor-primaria);
+}
+
+h1, h2, h3 {
+  color: var(--cor-escura);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.secao {
+  padding: 4rem 0;
+}
+
+/* ========== BOTÃO ========== */
+.botao {
+  display: inline-block;
+  background: var(--cor-secundaria);
+  color: #fff;
+  padding: 0.8em 1.8em;
+  border: none;
+  border-radius: 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.botao:hover {
+  background: #e84b8e;
+  transform: translateY(-0.15rem);
+}
+
+/* ========== CABEÇALHO + MENU (FLEXBOX) ========== */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--cor-escura);
+}
+
+.cabecalho__conteudo {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--cor-secundaria);
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* Hambúrguer escondido no desktop */
+.menu-toggle,
+.menu-botao {
+  display: none;
+}
+
+/* ========== BANNER ========== */
+.banner {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(108, 63, 224, 0.9), rgba(255, 95, 162, 0.85)),
+    url("https://picsum.photos/id/1043/1600/900") center / cover no-repeat;
+}
+
+.banner__conteudo {
+  width: 80%;
+  max-width: 45rem;
+}
+
+.banner h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* ========== SOBRE (GRID 2 COLUNAS) ========== */
+.sobre__grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.sobre__texto h2 {
+  text-align: left;
+}
+
+.valores {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.sobre__imagem img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* ========== SERVIÇOS (GRID) ========== */
+.servicos {
+  background: var(--cor-clara);
+}
+
+.servicos__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cartao {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  border-top: 0.3rem solid var(--cor-primaria);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-0.4rem);
+}
+
+.cartao h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ========== DEPOIMENTOS (FLEXBOX) ========== */
+.depoimentos__lista {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.depoimento {
+  flex: 1;
+  background: var(--cor-clara);
+  padding: 2rem;
+  border-radius: 1rem;
+  border-left: 0.3rem solid var(--cor-secundaria);
+}
+
+.depoimento p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.depoimento footer {
+  font-weight: bold;
+  color: var(--cor-escura);
+  font-size: 0.9em;
+}
+
+/* ========== CONTATO ========== */
+.contato {
+  background: var(--cor-clara);
+}
+
+.contato__grade {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.contato__info h2 {
+  text-align: left;
+}
+
+.contato address {
+  font-style: normal;
+}
+
+.contato address p {
+  margin-bottom: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.formulario label {
+  font-weight: bold;
+  color: var(--cor-escura);
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 0.75em;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  font: inherit;
+  margin-bottom: 0.75rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+.formulario .botao {
+  align-self: flex-start;
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+  background: var(--cor-escura);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablet */
+@media (max-width: 64rem) { /* 1024px */
+  .servicos__grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Celular */
+@media (max-width: 48rem) { /* 768px */
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .secao {
+    padding: 3rem 0;
+  }
+
+  /* Menu hambúrguer */
+  .menu-botao {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .menu-botao span {
+    display: block;
+    width: 1.6rem;
+    height: 0.18rem;
+    background: #fff;
+    border-radius: 0.2rem;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle:checked ~ .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 1rem;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 0.8rem 0;
+    border-top: 0.06rem solid rgba(255, 255, 255, 0.15);
+  }
+
+  .banner {
+    min-height: 70vh;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .sobre__grade,
+  .contato__grade,
+  .servicos__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .depoimentos__lista {
+    flex-direction: column;
+  }
+
+  .sobre__texto h2,
+  .contato__info h2 {
+    text-align: center;
+  }
+}

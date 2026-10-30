@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agência Criativa Web - design digital, sites e identidade visual.">
+  <title>Agência Criativa Web</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+      <a href="#home" class="logo">Criativa<span>Web</span></a>
+
+      <!-- Menu hambúrguer sem JavaScript (checkbox + label) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME / BANNER -->
+    <section id="home" class="banner">
+      <div class="banner__conteudo">
+        <h1>Transformamos ideias em experiências digitais</h1>
+        <p>Somos a Agência Criativa Web: design, tecnologia e estratégia para marcas que querem se destacar na internet.</p>
+        <a href="#contato" class="botao">Peça um orçamento</a>
+      </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="secao sobre">
+      <div class="container sobre__grade">
+        <div class="sobre__texto">
+          <h2>Sobre Nós</h2>
+          <p>Nascemos em 2015 com um objetivo simples: criar sites bonitos, rápidos e que realmente gerem resultados. Hoje somos uma equipe de designers, desenvolvedores e estrategistas apaixonados por tecnologia.</p>
+          <ul class="valores">
+            <li><strong>Criatividade:</strong> ideias originais para cada cliente.</li>
+            <li><strong>Transparência:</strong> comunicação clara em todas as etapas.</li>
+            <li><strong>Qualidade:</strong> código limpo e design cuidadoso.</li>
+          </ul>
+        </div>
+
+        <figure class="sobre__imagem">
+          <img
+            src="https://picsum.photos/id/1015/800/600"
+            srcset="https://picsum.photos/id/1015/400/300 400w,
+                    https://picsum.photos/id/1015/800/600 800w,
+                    https://picsum.photos/id/1015/1200/900 1200w"
+            sizes="(max-width: 48rem) 100vw, 50vw"
+            alt="Equipe da agência reunida em um escritório criativo"
+            loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="secao servicos">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos__grade">
+          <article class="cartao">
+            <h3>Criação de Sites</h3>
+            <p>Sites institucionais e landing pages responsivos e otimizados.</p>
+          </article>
+          <article class="cartao">
+            <h3>Identidade Visual</h3>
+            <p>Logotipos, paleta de cores e manual de marca consistentes.</p>
+          </article>
+          <article class="cartao">
+            <h3>UI/UX Design</h3>
+            <p>Interfaces intuitivas pensadas para a experiência do usuário.</p>
+          </article>
+          <article class="cartao">
+            <h3>Social Media</h3>
+            <p>Gestão de redes sociais e criação de conteúdo visual.</p>
+          </article>
+          <article class="cartao">
+            <h3>SEO</h3>
+            <p>Otimização para buscadores e aumento de tráfego orgânico.</p>
+          </article>
+          <article class="cartao">
+            <h3>Marketing Digital</h3>
+            <p>Campanhas e anúncios com foco em conversão.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="secao depoimentos">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="depoimentos__lista">
+          <blockquote class="depoimento">
+            <p>"O novo site dobrou nossas vendas em três meses. Equipe incrível!"</p>
+            <footer>— Mariana Souza, Doce Sabor Confeitaria</footer>
+          </blockquote>
+          <blockquote class="depoimento">
+            <p>"Profissionais atenciosos e muito criativos. Superaram as expectativas."</p>
+            <footer>— Carlos Mendes, Mendes Advocacia</footer>
+          </blockquote>
+          <blockquote class="depoimento">
+            <p>"A identidade visual ficou perfeita e todo o processo foi transparente."</p>
+            <footer>— Fernanda Lima, Studio Bem-Estar</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao contato">
+      <div class="container contato__grade">
+        <div class="contato__info">
+          <h2>Fale Conosco</h2>
+          <address>
+            <p><strong>Endereço:</strong> Rua das Ideias, 123 - Centro, Rio de Janeiro - RJ</p>
+            <p><strong>Telefone:</strong> <a href="tel:+552130000000">(21) 3000-0000</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:contato@criativaweb.com.br">contato@criativaweb.com.br</a></p>
+          </address>
+        </div>
+
+        <form class="formulario" action="#" method="post">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+
+          <button type="submit" class="botao">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
